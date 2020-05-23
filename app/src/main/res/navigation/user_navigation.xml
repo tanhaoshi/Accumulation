@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/user_navigation"
+            app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginInputFragment"
+        android:name="com.example.accumulation.ui.login.LoginInputFragment"
+        android:label="fragment_login_input"
+        tools:layout="@layout/fragment_login_input">
+    </fragment>
+
+    <fragment
+        android:id="@+id/checkCodeFragment"
+        android:name="com.example.accumulation.ui.check.CheckCodeFragment"
+        android:label="fragment_check_code"
+        tools:layout="@layout/fragment_check_code" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.accumulation.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_loginFragment_to_checkCodeFragment"
+            app:destination="@id/checkCodeFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_loginInputFragment"
+            app:destination="@+id/loginInputFragment"/>
+
+    </fragment>
+
+</navigation>

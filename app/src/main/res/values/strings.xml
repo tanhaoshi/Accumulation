@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">kf_user</string>
+
+    <string name="lg_title_name">使用验证码登录</string>
+
+    <string name="lg_welcome_prompt">欢迎使用可访</string>
+    <string name="lg_use_password">使用密码登录</string>
+    <string name="lg_constant_phone">+86</string>
+    <string name="lg_here_input">在这输入手机号</string>
+    <string name="lg_input_member">手机号或可访号</string>
+    <string name="lg_use_code">验证码登录</string>
+
+    <string name="lg_extra_code">获取验证码</string>
+
+    <string name="lg_use_verify_code">输入验证码</string>
+
+    <string name="lg_normal_agreement_head">我已查看并同意 可访用户协议 和 隐私政策</string>
+    <string name="lg_normal_agreement_body">可访用户协议</string>
+    <string name="lg_normal_agreement_and"> 和 </string>
+    <string name="lg_normal_agreement_end">隐私政策</string>
+
+    <!-- material lg -->
+    <string name="material_header_photo">添加头像</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

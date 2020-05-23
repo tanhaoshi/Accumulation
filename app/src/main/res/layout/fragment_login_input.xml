@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.UserActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout"/>
+
+    <TextView
+        android:id="@+id/welcomePrompt"
+        android:text="@string/lg_use_password"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:layout_marginTop="@dimen/size_106dp"
+        android:layout_marginLeft="@dimen/size_20dp"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_30sp"
+        android:textColor="@color/lg_bar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/text_layout"
+        app:layout_constraintTop_toBottomOf="@+id/welcomePrompt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_47dp"
+        android:layout_marginTop="@dimen/size_12dp"
+        android:layout_marginLeft="@dimen/size_20dp"
+        android:layout_marginRight="@dimen/size_20dp">
+
+        <EditText
+            android:id="@+id/login_edt_phone"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/constant_number"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40dp"
+            android:hint="@string/lg_input_member"
+            android:inputType="number"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/size_4dp"
+            android:singleLine="true"
+            android:background="@null"
+            android:textColor="@color/lg_bar_title"
+            android:textColorHint="@color/lg_editText_hint"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <ImageView
+            android:id="@+id/login_iv_delete"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/size_16dp"
+            android:layout_height="@dimen/size_16dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/size_8dp"
+            android:contentDescription="TODO"
+            android:src="@mipmap/ic_comm_delete"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/lg_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_layout"
+        android:layout_marginLeft="@dimen/size_20dp"
+        android:layout_marginRight="@dimen/size_20dp"
+        android:background="@color/lg_line_color"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"/>
+
+    <RelativeLayout
+        android:id="@+id/password_layout"
+        app:layout_constraintTop_toBottomOf="@+id/lg_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_47dp"
+        android:layout_marginTop="@dimen/size_12dp"
+        android:layout_marginLeft="@dimen/size_20dp"
+        android:layout_marginRight="@dimen/size_20dp">
+
+        <EditText
+            android:id="@+id/login_edt_password"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/constant_number"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40dp"
+            android:hint="@string/lg_use_password"
+            android:inputType="number"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/size_4dp"
+            android:singleLine="true"
+            android:background="@null"
+            android:textColor="@color/lg_bar_title"
+            android:textColorHint="@color/lg_editText_hint"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <ImageView
+            android:id="@+id/login_iv_hint"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/size_16dp"
+            android:layout_height="@dimen/size_16dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/size_8dp"
+            android:contentDescription="TODO"
+            android:src="@mipmap/no_see"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/lg_line1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_layout"
+        android:layout_marginLeft="@dimen/size_20dp"
+        android:layout_marginRight="@dimen/size_20dp"
+        android:background="@color/lg_line_color"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"/>
+
+    <FrameLayout
+        android:id="@+id/frameLayout_btn"
+        app:layout_constraintTop_toBottomOf="@+id/lg_line1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/size_39dp"
+        android:layout_marginLeft="@dimen/size_20dp"
+        android:layout_marginRight="@dimen/size_20dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_46dp">
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:text="@string/lg_extra_code"
+            android:textSize="@dimen/text_size_18sp"
+            android:textColor="@color/lg_btn_unConfirm"
+            android:background="@drawable/selector_btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.manjinba.user.widget.ChrysanthemumView
+            android:id="@+id/loading"
+            app:lineCount="12"
+            app:startColor="@color/white"
+            app:endColor="@color/lg_loading_end"
+            android:layout_gravity="center"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/user_agreement"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="1"
+        android:layout_marginBottom="@dimen/size_46dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_24dp">
+
+        <RadioButton
+            android:id="@+id/radioBtn"
+            android:button="@null"
+            android:checked="false"
+            android:background="@drawable/bg_tadio_selector"
+            android:layout_gravity="center_vertical"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+
+        <!-- 添加textview文本 为了防止radiobutton图片变形 -->
+        <TextView
+            android:id="@+id/lg_agreement_text"
+            android:layout_marginLeft="@dimen/size_2.5dp"
+            android:layout_marginBottom="@dimen/size_0.5dp"
+            android:textSize="@dimen/text_size_11sp"
+            android:textColor="@color/lg_editText_hint"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

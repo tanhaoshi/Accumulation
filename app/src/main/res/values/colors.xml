@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lg_bar_title">#333333</color>
+    <color name="lg_editText_hint">#999999</color>
+    <color name="lg_line_color">#3D7EFF</color>
+    <color name="lg_alert_phone">#FF1717</color>
+
+    <color name="lg_loading_end">#66E0D9D9</color>
+
+    <color name="lg_btn_confirm">#AFCAFF</color>
+
+    <color name="lg_btn_unConfirm">#FAFAFA</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <!-- user check code -->
+    <color name="code_line">#EEEEEE</color>
+    <color name="code_font_send">#666666</color>
+</resources>

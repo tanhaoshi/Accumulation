@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 自定义菊花图形加载图案 -->
+    <declare-styleable name="ChrysanthemumView">
+        <!--线条个数-->
+        <attr name="lineCount" format="integer" />
+        <!--菊花开始颜色-->
+        <attr name="startColor" format="reference|color" />
+        <!--菊花结束颜色-->
+        <attr name="endColor" format="reference|color" />
+    </declare-styleable>
+
+    <!-- 自定义圆形ImageView -->
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension"/>
+        <attr name="civ_border_color" format="color"/>
+        <attr name="civ_border_overlay" format="boolean"/>
+        <attr name="civ_fill_color" format="color"/>
+    </declare-styleable>
+
+</resources>
