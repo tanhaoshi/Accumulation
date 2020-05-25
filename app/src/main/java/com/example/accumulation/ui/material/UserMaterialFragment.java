@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import com.example.accumulation.R;
 import com.example.accumulation.mvp.base.UserBaseFragment;
+import com.example.accumulation.mvp.base.UserBasePresenterImpl;
 
 
 public class UserMaterialFragment extends UserBaseFragment {
@@ -26,8 +27,27 @@ public class UserMaterialFragment extends UserBaseFragment {
     }
 
     @Override
-    protected void initData() {
+    public UserBasePresenterImpl initPresenter() {
+        return null;
+    }
+
+    @Override
+    public void showProgress(boolean isTrue) {
 
     }
 
+    @Override
+    public void hideProgress() {
+
+    }
+
+    @Override
+    public void showError(String msg) {
+
+    }
+
+    @Override
+    public void loadData(boolean pullToRefresh) {
+
+    }
 }

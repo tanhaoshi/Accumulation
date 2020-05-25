@@ -54,7 +54,7 @@ t
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1</item>
         <item name="android:layout_marginLeft">10dp</item>
-        <item name="android:background">#ffffff</item>
+        <item name="android:background">@color/white</item>
         <item name="android:textSize">15sp</item>
         <item name="android:singleLine">true</item>
         <item name="android:textColorHint">@color/lg_editText_hint</item>
@@ -65,7 +65,7 @@ t
     <style name="verify_code_style">
         <item name="android:layout_height">48dp</item>
         <item name="android:layout_width">41dp</item>
-        <item name="android:background">#ffffff</item>
+        <item name="android:background">@color/transparent</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/lg_bar_title</item>
         <item name="android:textSize">32sp</item>

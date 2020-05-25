@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <EditText
+        <com.example.accumulation.widget.ClearWriteEditText
             android:id="@+id/login_edt_phone"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@+id/constant_number"
@@ -71,7 +71,7 @@
             android:layout_marginRight="@dimen/size_8dp"
             android:contentDescription="TODO"
             android:src="@mipmap/ic_comm_delete"
-            android:visibility="invisible" />
+            android:visibility="gone" />
     </RelativeLayout>
 
 
@@ -87,12 +87,12 @@
 
     <TextView
         android:id="@+id/alert_for_phone"
+        android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@+id/lg_line"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="@dimen/size_3dp"
         android:layout_marginLeft="@dimen/size_58dp"
         android:textSize="@dimen/text_size_12sp"
-        android:text="输入手机号格式不正确"
         android:textColor="@color/lg_alert_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
@@ -107,10 +107,12 @@
          android:layout_width="match_parent"
          android:layout_height="@dimen/size_46dp">
 
+
+<!--          android:text="@string/lg_extra_code" -->
          <Button
              android:id="@+id/btn_confirm"
-             android:text="@string/lg_extra_code"
              android:textSize="@dimen/text_size_18sp"
+             android:enabled="false"
              android:textColor="@color/lg_btn_unConfirm"
              android:background="@drawable/selector_btn_login"
              android:layout_width="match_parent"
@@ -118,12 +120,13 @@
 
         <com.example.accumulation.widget.ChrysanthemumView
             android:id="@+id/loading"
+            android:visibility="visible"
             app:lineCount="12"
             app:startColor="@color/white"
             app:endColor="@color/lg_loading_end"
             android:layout_gravity="center"
-            android:layout_width="24dp"
-            android:layout_height="24dp" />
+            android:layout_width="@dimen/size_24dp"
+            android:layout_height="@dimen/size_24dp" />
 
      </FrameLayout>
 

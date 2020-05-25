@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.accumulation.R;
 import com.example.accumulation.mvp.base.UserBaseFragment;
+import com.example.accumulation.mvp.base.UserBasePresenterImpl;
 import com.example.accumulation.widget.ChrysanthemumView;
 
 import androidx.navigation.Navigation;
@@ -51,6 +52,11 @@ public class LoginFragment extends UserBaseFragment {
         toolbarRight.setText(getResources().getString(R.string.lg_use_password));
     }
 
+    @Override
+    public UserBasePresenterImpl initPresenter() {
+        return null;
+    }
+
     @OnClick({R.id.toolbar_right,R.id.btn_confirm})
     public void onClick(View view){
         switch (view.getId()){
@@ -64,16 +70,31 @@ public class LoginFragment extends UserBaseFragment {
     }
 
     @Override
-    protected void initData() {
-
-    }
-
-    @Override
     public void onDestroyView() {
         super.onDestroyView();
         if(null != chrysanthemumView){
             chrysanthemumView.stopAnimation();
             chrysanthemumView.detachView();
         }
+    }
+
+    @Override
+    public void showProgress(boolean isTrue) {
+
+    }
+
+    @Override
+    public void hideProgress() {
+
+    }
+
+    @Override
+    public void showError(String msg) {
+
+    }
+
+    @Override
+    public void loadData(boolean pullToRefresh) {
+
     }
 }

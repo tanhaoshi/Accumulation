@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- login style -->
+    <color name="white">#FFFFFF</color>
+
     <color name="lg_bar_title">#333333</color>
     <color name="lg_editText_hint">#999999</color>
     <color name="lg_line_color">#3D7EFF</color>
@@ -11,9 +15,13 @@
 
     <color name="lg_btn_unConfirm">#FAFAFA</color>
 
-    <color name="white">#FFFFFF</color>
-
-    <!-- user check code -->
+    <!-- user check code style -->
     <color name="code_line">#EEEEEE</color>
     <color name="code_font_send">#666666</color>
+
+    <!-- material style -->
+    <color name="m_nick_name_color">#0E0E0E</color>
+
+    <color name="transparent">@android:color/transparent</color>
+
 </resources>

@@ -137,9 +137,10 @@
         android:id="@+id/edit_text_view"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="@color/white"
-        android:textColor="@android:color/transparent"
+        android:background="@android:color/transparent"
+        android:textColor="@color/transparent"
         android:longClickable="false"
         android:maxLength="6"
+        android:textIsSelectable="true"
         android:inputType="number" />
 </RelativeLayout>

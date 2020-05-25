@@ -6,6 +6,7 @@ import android.widget.ImageView;
 
 import com.example.accumulation.R;
 import com.example.accumulation.mvp.base.UserBaseFragment;
+import com.example.accumulation.mvp.base.UserBasePresenterImpl;
 
 import androidx.navigation.Navigation;
 import butterknife.BindView;
@@ -33,8 +34,8 @@ public class CheckCodeFragment extends UserBaseFragment {
     }
 
     @Override
-    protected void initData() {
-
+    public UserBasePresenterImpl initPresenter() {
+        return null;
     }
 
     @OnClick({R.id.toolbar_back})
@@ -44,5 +45,25 @@ public class CheckCodeFragment extends UserBaseFragment {
                 Navigation.findNavController(getActivity(),R.id.nav_host_fragment).popBackStack();
                 break;
         }
+    }
+
+    @Override
+    public void showProgress(boolean isTrue) {
+
+    }
+
+    @Override
+    public void hideProgress() {
+
+    }
+
+    @Override
+    public void showError(String msg) {
+
+    }
+
+    @Override
+    public void loadData(boolean pullToRefresh) {
+
     }
 }

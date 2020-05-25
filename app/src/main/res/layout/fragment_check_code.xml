@@ -38,7 +38,6 @@
         android:layout_marginTop="@dimen/size_3dp"
         android:layout_marginLeft="@dimen/size_20dp"
         android:textSize="@dimen/text_size_14sp"
-        android:text="验证码已发送至"
         android:textColor="@color/code_font_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>

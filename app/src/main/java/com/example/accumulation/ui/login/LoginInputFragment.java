@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.accumulation.R;
 import com.example.accumulation.mvp.base.UserBaseFragment;
+import com.example.accumulation.mvp.base.UserBasePresenterImpl;
 
 import androidx.navigation.Navigation;
 import butterknife.BindView;
@@ -35,10 +36,7 @@ public class LoginInputFragment extends UserBaseFragment {
     @Override
     protected void onInitView() {
         right_title.setText(getActivity().getResources().getString(R.string.lg_use_code));
-    }
 
-    @Override
-    protected void initData() {
         SpannableStringBuilder builder = new SpannableStringBuilder();
         builder.append(getResources().getString(R.string.lg_normal_agreement_head));
         ForegroundColorSpan colorSpan_one = new ForegroundColorSpan(getResources().getColor(R.color.lg_line_color));
@@ -47,6 +45,11 @@ public class LoginInputFragment extends UserBaseFragment {
         builder.setSpan(colorSpan_two,17,21,Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
 
         lgAgreementText.setText(builder);
+    }
+
+    @Override
+    public UserBasePresenterImpl initPresenter() {
+        return null;
     }
 
     @OnClick({R.id.toolbar_right})
@@ -58,4 +61,23 @@ public class LoginInputFragment extends UserBaseFragment {
         }
     }
 
+    @Override
+    public void showProgress(boolean isTrue) {
+
+    }
+
+    @Override
+    public void hideProgress() {
+
+    }
+
+    @Override
+    public void showError(String msg) {
+
+    }
+
+    @Override
+    public void loadData(boolean pullToRefresh) {
+
+    }
 }

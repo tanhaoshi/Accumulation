@@ -14,11 +14,12 @@ import butterknife.Unbinder;
 /**
  * create by tanhs on 2020/5/22 15:00
  */
-public abstract class UserBaseFragment extends Fragment {
+public abstract class UserBaseFragment<P extends UserBasePresenterImpl> extends Fragment implements UserBaseView{
 
     protected Unbinder unbinder;
     protected View     rootView;
     protected boolean  isFirstLoader = true;
+    protected P        mPresenter;
 
     @Nullable
     @Override
@@ -35,24 +36,25 @@ public abstract class UserBaseFragment extends Fragment {
         } else {
             rootView = super.onCreateView(inflater, container, savedInstanceState);
         }
+
+        mPresenter = initPresenter();
+
         unbinder = ButterKnife.bind(this, rootView);
 
         return rootView;
     }
 
-
     protected abstract int getLayoutId();
 
     protected abstract void onInitView();
 
-    protected abstract void initData();
+    public abstract P initPresenter();
 
     @Override
     public void onResume() {
         super.onResume();
         if(isFirstLoader){
             onInitView();
-            initData();
             isFirstLoader = false;
         }
     }
